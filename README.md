@@ -2,14 +2,7 @@
 
 A zero-dependency terminal UI for generating `configuration.nix` — written in TypeScript and running on [Bun](https://bun.sh).
 
-```
-  ███╗   ██╗██╗██╗  ██╗ ██████╗ ███████╗
-  ████╗  ██║██║╚██╗██╔╝██╔═══██╗██╔════╝
-  ██╔██╗ ██║██║ ╚███╔╝ ██║   ██║███████╗
-  ██║╚██╗██║██║ ██╔██╗ ██║   ██║╚════██║
-  ██║ ╚████║██║██╔╝ ██╗╚██████╔╝███████║
-  ╚═╝  ╚═══╝╚═╝╚═╝  ╚═╝ ╚═════╝ ╚══════╝
-```
+<img width="1890" height="1110" alt="image" src="https://github.com/user-attachments/assets/457c5608-91d9-456c-a828-f5bf5390c9e8" />
 
 ## Features
 
