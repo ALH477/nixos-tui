@@ -1,0 +1,19 @@
+{
+  "name": "nixos-tui",
+  "version": "3.0.0",
+  "description": "A terminal UI for generating NixOS configuration.nix — with Sierpinski fractal scaled to your CPU thread count",
+  "license": "MIT",
+  "author": "nixos-tui contributors",
+  "scripts": {
+    "start": "bun run src/main.ts",
+    "dev":   "bun --watch run src/main.ts",
+    "check": "bun run --bun tsc --noEmit"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.0",
+    "@types/node": "^20.0.0"
+  },
+  "engines": {
+    "bun": ">=1.0.0"
+  }
+}

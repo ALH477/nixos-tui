@@ -1,0 +1,47 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  typecheck:
+    name: Type-check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Bun
+        uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: latest
+
+      - name: Install dev dependencies
+        run: bun install
+
+      - name: Type-check
+        run: bun run check
+
+  lint:
+    name: Validate source
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check file exists and is non-empty
+        run: |
+          test -f src/main.ts
+          test $(wc -l < src/main.ts) -gt 100
+          echo "src/main.ts OK ($(wc -l < src/main.ts) lines)"
+
+      - name: Check shebang
+        run: head -1 src/main.ts | grep -q '#!/usr/bin/env bun'
+
+      - name: Check brace balance
+        run: |
+          opens=$(grep -o '{' src/main.ts | wc -l)
+          closes=$(grep -o '}' src/main.ts | wc -l)
+          echo "Opens: $opens  Closes: $closes"
+          test "$opens" -eq "$closes"
