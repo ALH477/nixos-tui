@@ -298,9 +298,9 @@ const SETTINGS: SettingsSection[] = [
   {
     id: "user", icon: "👤", label: "User",
     settings: [
-      { key:"username",    label:"Username",        type:"string", value:"alice",
+      { key:"username",    label:"Username",        type:"string", value:"asher",
         placeholder:"e.g. alice",       description:"Primary user account (users.users.<n>)" },
-      { key:"fullName",    label:"Full Name",        type:"string", value:"Alice",
+      { key:"fullName",    label:"Full Name",        type:"string", value:"Asher",
         placeholder:"e.g. Alice Smith", description:"users.users.<n>.description" },
       { key:"shell",       label:"Default Shell",   type:"enum",   value:"bash",
         options:["bash","zsh","fish","nushell","elvish"], description:"users.users.<n>.shell = pkgs.<shell>" },
